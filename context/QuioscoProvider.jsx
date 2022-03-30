@@ -22,6 +22,10 @@ const QuioscoProvider = ({children}) => {
     obtenerCategorias()
   }, [])
 
+  useEffect(() => {
+    setCategoriaActual(categorias[0])
+  }, [categorias])
+
   return (
     <QuioscoContext.Provider
       value={{
